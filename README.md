@@ -108,7 +108,7 @@ You must create all missing files from scratch as part of the challenge. (docker
 
 # Solución del reto
 
-**Integrantes:** Victoria Herrera ([@Serendicto13](https://github.com/Serendicto13)) y [@oraboni08](https://github.com/oraboni08).
+**Integrantes:** Victoria Herrera ([@Serendicto13](https://github.com/Serendicto13)) y Jhon Jairo Sons ([@oraboni08](https://github.com/oraboni08)).
 
 ## Cómo ejecutarlo
 
