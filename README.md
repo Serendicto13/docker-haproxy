@@ -202,6 +202,10 @@ Reportes de JMeter por escenario:
 
 ![Reporte del escenario F](docs/jmeter/reporte-escenario-f.png)
 
+Response Time Graph de la sesión en la interfaz de JMeter, con los escenarios B a F corridos uno tras otro. Los dos aumentos pequeños son las pruebas de mayor carga (C y D). El pico del final es el escenario F: al caer `backend2`, las peticiones que iban hacia él quedan esperando más de 10 segundos, hasta que HAProxy lo saca de la rotación y el tiempo vuelve a la normalidad.
+
+![Response Time Graph con la caída de backend2](docs/jmeter/gui-response-time-graph-caida.png)
+
 ### Conclusiones
 
 - **El sistema tiene un techo cercano a 480 peticiones por segundo.** De 10 a 100 usuarios el throughput sube de 106 a 487 pet/s. De ahí en adelante se estanca: con 300 usuarios sigue en 482.
