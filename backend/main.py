@@ -1,3 +1,5 @@
+import socket
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -13,4 +15,4 @@ app.add_middleware(
 
 @app.get("/api/hello")
 def read_hello():
-    return {"message": "Hello from FastAPI!"}
+    return {"message": "Hello from FastAPI!", "server": socket.gethostname()}
