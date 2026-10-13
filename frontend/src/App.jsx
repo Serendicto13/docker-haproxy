@@ -3,12 +3,16 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [message, setMessage] = useState("Cargando...");
+  const [server, setServer] = useState("");
 
   useEffect(() => {
     fetch("/api/hello")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message))
-      .catch((err) => setMessage("Fallo en la llamada a la API"));
+     .then((res) => res.json())
+     .then((data) => {
+        setMessage(data.message);
+        setServer(data.server);
+      })
+     .catch((err) => setMessage("Fallo en la llamada a la API"));
   }, []);
 
   const styles = {
@@ -43,6 +47,7 @@ function App() {
     <div style={styles.wrapper}>
       <h1 style={styles.heading}>🚀 React + FastAPI + HAProxy</h1>
       <p style={styles.message}>{message}</p>
+      {server && <p>Atendido por: <strong>{server}</strong></p>}
     </div>
   );
 }
